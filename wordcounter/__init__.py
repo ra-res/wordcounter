@@ -3,12 +3,12 @@ import os
 from flask import Flask
 from . import counter 
 from paths import paths
-from flask_dropzone import Dropzone
+
 
 def create_app(test_config=None):
 
     app = Flask(__name__, instance_relative_config=True)
-    dropzone = Dropzone(app)
+
 
     app.config.from_mapping(
         SECRET_KEY='dev',
