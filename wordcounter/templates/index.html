@@ -3,12 +3,13 @@
 {% block header %}
   <h1>{% block title %}Add cv to count words{% endblock %}</h1>
 {% endblock %}
-
+  
 {% block content %}
 <title>Upload new File</title>
-<h1>Upload new File</h1>
 <form method=post enctype=multipart/form-data>
+  <h1>Upload new File</h1>
   <input type=file name=file>
   <input type=submit value=Upload>
 </form>
+
 {% endblock %}
