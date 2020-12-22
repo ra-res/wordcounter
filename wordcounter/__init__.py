@@ -4,10 +4,6 @@ from flask import Flask
 from . import counter 
 from paths import paths
 
-# UPLOAD_FOLDER = f'{os.getcwd()}\\cvuploads'
-# ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt'}
-
-
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(

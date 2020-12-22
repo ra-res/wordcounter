@@ -5,6 +5,8 @@ __pycache__/
 
 instance/
 
+wordcounter/
+
 .pytest_cache/
 .coverage
 htmlcov/
