@@ -1,11 +1,9 @@
 import os, shutil
-
 from flask import (
     Blueprint, current_app, flash, g, redirect, render_template, request, url_for
 )
 from werkzeug.exceptions import abort
 from werkzeug.utils import secure_filename
-
 from paths import paths
 
 bp = Blueprint('/', __name__)

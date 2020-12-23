@@ -1,9 +1,7 @@
 import os
-
 from flask import Flask
 from . import counter 
 from paths import paths
-
 
 def create_app(test_config=None):
 
