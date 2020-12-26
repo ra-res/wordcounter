@@ -1,14 +1,25 @@
 {% extends 'base.html' %}
 
 {% block header %}
+{{ dropzone.load_css() }}
+{{ dropzone.style('border: 2px dashed #0087F7; margin: 5%; min-height: 200px; min-width: 200px;' ) }}
   <h1>{% block title %}Add cv to count words{% endblock %}</h1>
 {% endblock %}
   
 {% block content %}
-<title>Upload new File</title>
-<form method=post enctype=multipart/form-data action='/'>
-  <h1>Upload new File</h1>
-  <input type=file name=file>
-  <input type=submit value=Upload>
-</form>
+
+  {{ dropzone.create('/') }}
+  {{ dropzone.load_js() }}
+  {{ dropzone.config() }}
+
+<script>
+function reload_function() {
+  location.reload();
+}
+</script>
+
+<button onclick="reload_function()">Get count</button>
+{% if session['count'] %}
+<div id=here class="flash"><span>CV contains: {{ session['count'] }} words</span></div>
+{% endif %}
 {% endblock %}
