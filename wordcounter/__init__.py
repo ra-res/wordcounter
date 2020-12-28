@@ -4,7 +4,7 @@ from . import counter
 from paths import paths
 from flask_dropzone import Dropzone
 from flask import request, render_template
-from paths import paths
+from . import paths
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
