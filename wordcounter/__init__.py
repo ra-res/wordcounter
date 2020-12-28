@@ -1,7 +1,6 @@
 import os
 from flask import Flask
 from . import counter
-from paths import paths
 from flask_dropzone import Dropzone
 from flask import request, render_template
 from . import paths

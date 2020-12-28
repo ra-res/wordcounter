@@ -59,5 +59,6 @@ def upload_file():
             delete_files()
         else:
             flash("Incorrect file type, only PDF or TXT allowed")
+            session['count'] = 'Incorrect file type'
             return redirect(request.url)
     return render_template("index.html")
