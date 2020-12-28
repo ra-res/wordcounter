@@ -19,9 +19,9 @@ function reload_function() {
 </script>
 
 <button onclick="reload_function()">Get count</button>
-{% if session['count'] != 'Incorrect file type' %}
+{% if session['count'] and session['count'] != 'Incorrect file type' %}
 <div id=here class="flash"><span>CV contains: {{ session['count'] }} words</span></div>
-{% else %}
+{% else session['count'] != 'Incorrect file type' %}
 <div id=here class="flash"><span>{{ session['count'] }}</span></div>
 {% endif %}
 {% endblock %}
